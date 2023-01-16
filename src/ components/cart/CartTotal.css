@@ -1,0 +1,47 @@
+#CartTotal_Flex{
+    background: #ffffff;
+    border: 1px solid black;
+    height: 10rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    place-items: center;
+    align-items: center;
+}
+
+#CartTotal_Flex li{
+    list-style: none;
+}
+
+#CartTotal_Price, #CartTotal_Delivery,
+#CartTotal_Sale, #CartTotal_Pay{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#CartTotal_Price_Unit{
+    font-size: 90%;
+    margin-left: 0.125rem;
+    font-weight: normal;
+}
+
+#CartTotal_TotalPriceName, #CartTotal_SaleName,
+#CartTotal_DeliveryName, #CartTotal_PayPriceName{
+    letter-spacing: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    color: black;
+}
+
+#CartTotal_TotalPrice, #CartTotal_SalePrice,
+#CartTotal_DeliveryPrice, #CartTotal_PayPrice{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: red;
+}

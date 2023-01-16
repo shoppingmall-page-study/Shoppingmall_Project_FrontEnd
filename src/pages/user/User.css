@@ -1,0 +1,6 @@
+.User_Window{
+    padding-left: 10rem;
+    display: flex;
+    justify-content: center;
+    /* height: 100%; */
+}

@@ -1,0 +1,36 @@
+.Register_Position{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Register_Window{
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.025);
+    width: 22.5rem;
+    padding: 2rem;
+    background: white;
+}
+
+.Register_Logo{
+    display: block;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    font-size: 1.125rem;
+}
+
+.Register_Text h3{
+    margin: 0;
+    color: #343a40;
+}
+
+.Register_Input{
+    margin-top: 1rem;
+    display: flex;
+}

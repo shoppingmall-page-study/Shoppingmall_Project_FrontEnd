@@ -1,0 +1,64 @@
+.CartContents_Grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+    height: 15rem;
+    background: #ffffff;
+    border: 1px solid black;
+}
+
+.CartContents_Flex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.CartContents_Img_Window{
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid #343a40;
+}
+
+#CartContents_Img{
+    width: 100%;
+    height: 100%;
+}
+
+.CartContents_Product_Info{
+    text-align: end;
+    flex: 1;
+}
+
+.CartContents_Product_Info p{
+    margin: 0;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+#CartContents_Price_Unit{
+    font-size: 90%;
+    margin-left: 0.125rem;
+    font-weight: normal;
+}
+
+.CartContents_Count{
+    position: relative;
+    width: 6.25rem;
+    height: 2rem;
+    border: 1px solid #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#CartCountents_Count_Minus{
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+#CartCountents_Count_Plus{
+    position: absolute;
+    right: 0;
+    height: 100%;
+}

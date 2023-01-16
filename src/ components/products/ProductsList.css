@@ -1,0 +1,15 @@
+.ProductsList_Grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+    background: #ffffff;
+    min-width: 75rem;
+    max-width: 93.75rem;
+    margin: auto;
+}
+
+@media only screen and (min-width: 93.75rem){
+    .ProductsList_Grid{
+        grid-template-columns: repeat(5,1fr);
+    }
+}

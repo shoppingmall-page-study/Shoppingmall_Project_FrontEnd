@@ -1,0 +1,15 @@
+#CartHeader_Grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    font-size: 1rem;
+    place-items: center;
+    color: #000000;
+    letter-spacing: 0.25rem;
+    padding: 0;
+    background: #ffffff;
+    height: 3.75rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.025);
+    border: 1px solid black;
+    margin: 0;
+}

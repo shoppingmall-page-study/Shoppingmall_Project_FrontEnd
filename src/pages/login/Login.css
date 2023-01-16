@@ -1,0 +1,85 @@
+.Login_Position{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Login_Window{
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.025);
+    width: 22.5rem;
+    padding: 2rem;
+    background: white;
+}
+
+.Login_Logo{
+    display: block;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    font-size: 1.125rem;
+}
+
+.Login_Text h3{
+    margin: 0;
+    color: #343a40;
+}
+
+.Login_Input{
+    margin-top: 1rem;
+}
+
+.Login_Register{
+    margin-top: 1rem;
+    text-align: end;
+    font-size: 0.875rem;
+    color: #343a40;
+}
+
+#Login_Register_Link{
+    border-bottom: 1px solid #343a40;
+}
+
+#Login_Register_Link:hover{
+    color: #000000;
+    border-bottom: 1px solid #000000;
+    font-weight: bold;
+}
+
+.Login_GoogleLogin_Logo::before{
+    background: url('/public/googleLogo.png') no-repeat;
+    content: "";
+    width: 2.375rem;
+    height: 2.375rem;
+    background-size: 1.75rem 1.75rem;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: white;
+    background-position: center;
+    border: 1px solid #4285F4;
+}
+
+#Login_GoogleLogin_Text{
+    flex: 1;
+}
+
+.Login_KakaoLogin_Logo::before{
+    background: url('/Users/lsm/Desktop/WorkSpace/shop-front/public/kakaoLogo.png') no-repeat;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #FEE500;
+    background-position: 0rem 50%;
+}
+
+#Login_KakaoLogin_Text{
+    flex: 1;
+}

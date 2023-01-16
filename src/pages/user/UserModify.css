@@ -1,0 +1,24 @@
+.UserModify_Window{
+    display: flex;
+    height: 100%;
+    background: white;
+    min-width: 75rem;
+    max-width: 93.75rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.UserModify_Postcode{
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.UserModify_Addr{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Upload_Count{
+    width: 12.5rem;
+}
