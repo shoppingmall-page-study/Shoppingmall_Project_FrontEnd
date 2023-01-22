@@ -2,18 +2,20 @@ header{
     height: 3.75rem;
     border-bottom: 2px solid #000;
     background: white;
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 2;
+    right: 0; */
+    /* z-index: 2; */
+    /* width: 100%; */
+    position: relative;
+    min-width: 75rem;
     box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2);
+    font-family: "Apple SD Gothic Neo","Noto Sans KR",sans-serif;
 }
 
 .Header_Grid{
     display: grid;
-    
     grid-template-columns: repeat(3,1fr);
     height: 100%;
     align-items: center;
@@ -83,6 +85,7 @@ header{
 .Header_List_window{
     /* position: relative; */
     height: 2.25rem;
+    /* font-weight: bold; */
 }
 
 #Header_List_Grid{
@@ -92,7 +95,7 @@ header{
     margin: 0;
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 #Header_List_Grid li{
@@ -111,14 +114,30 @@ header{
     height: 100%;
     display: flex;
     align-items: center;
-    letter-spacing: 0.25rem;
+    /* letter-spacing: 0.25rem; */
 }
 
-#Header_User_Menu_Window{
+#Header_User_Menu_Position{
     position: relative;
 }
 
-#Header_User:hover + .Header_User_Menu{
+.Header_User_Menu_Window{
+    height: 100%;
+}
+
+.Header_User_Menu_Window:hover .Header_User_Menu{
+    display: block;
+}
+
+.Header_User_Menu_Window #Header_Menu_Up{
+    display: none;
+}
+
+.Header_User_Menu_Window:hover #Header_Menu_Down{
+    display: none;
+}
+
+.Header_User_Menu_Window:hover #Header_Menu_Up{
     display: block;
 }
 
@@ -143,9 +162,13 @@ header{
     margin: 0;
     padding: 0;
     font-size: 0.875rem;
-    line-height: 2rem;;
+    /* line-height: 2rem;; */
     display: flex;
     justify-content: center;
+}
+
+#Header_User_Menu_P + #Header_User_Menu_P{
+    margin-top: 1rem;
 }
 
 .Header_User_Menu a:hover{

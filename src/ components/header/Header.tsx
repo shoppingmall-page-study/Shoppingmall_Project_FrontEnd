@@ -3,8 +3,11 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import './Header.css'
 import { Button, InputAdornment, Menu, styled, TextField } from '@mui/material';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-
-import { useRef } from 'react';
+import ArrowDropUpOutlinedIcon from '@mui/icons-material/ArrowDropUpOutlined';
+import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
+import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import { useCallback, useRef, useState } from 'react';
 import { signout } from '../../api/ApiService';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../modules';
@@ -29,26 +32,27 @@ const CssHeaderTextField = styled(TextField)({ //TextField스타일 컴포넌트
     }
   });
 
-const CssLogoutButton = styled(Button)({
-    fontSize: '1rem',
-    color: '#000000',
-    padding: '0px 0.25rem',
-    textDecoration: 'none',
-    height: '2rem',
-    // letterSpacing: '0.25rem',
-    border: '1px solid #bcbfc6',
-    borderRadius: '0%',
-    background: '#fafbf6',
-    '&:hover': {
-        background: '#fafbf6'
-    }
-})
+// const CssLogoutButton = styled(Button)({
+//     fontSize: '1rem',
+//     color: '#000000',
+//     padding: '0px 0.25rem',
+//     textDecoration: 'none',
+//     height: '2rem',
+//     // letterSpacing: '0.25rem',
+//     border: '1px solid #bcbfc6',
+//     borderRadius: '0%',
+//     background: '#fafbf6',
+//     '&:hover': {
+//         background: '#fafbf6'
+//     }
+// })
 
 const Header = () => {
     const accessToken = localStorage.getItem("ACCESS_TOKEN")
     // const state = accessToken === "" ? true : false
-    const state = false
+    const [state, setState] = useState<Boolean>(false)
     const username = useSelector((state: RootState) => state.UserReducer.username)
+
     return (
         <>
             <header>
@@ -86,15 +90,17 @@ const Header = () => {
                             <ul id='Header_List_Grid'>
                                 <li><Link to='/cart'>장바구니</Link></li>
                                 <li><Link to='/upload'>상품등록</Link></li>
-                                <li id='Header_User_Menu_Window'><Link id='Header_User' to='/user'>000님<MenuOutlinedIcon/>
-                                </Link>
-                                <div className='Header_User_Menu'>
-                                    <p><Link to='/review/list'>리뷰목록</Link></p>
-                                    <p><Link to='/order/list'>주문목록</Link></p>
-                                    <p><Link to='/product/list'>등록상품목록</Link></p>
-                                </div>
+                                <li id='Header_User_Menu_Position'>
+                                    <div className='Header_User_Menu_Window'>
+                                        <Link id='Header_User' to='/user'>000님<span id='Header_User_Menu_Icon'><KeyboardArrowDownOutlinedIcon id='Header_Menu_Down'/><KeyboardArrowUpOutlinedIcon id='Header_Menu_Up'/></span></Link>
+                                        <div className='Header_User_Menu'>
+                                        <p id='Header_User_Menu_P'><Link to='/review/list'>리뷰목록</Link></p>
+                                        <p id='Header_User_Menu_P'><Link to='/order/list'>주문목록</Link></p>
+                                        <p id='Header_User_Menu_P'><Link to='/product/list'>등록상품목록</Link></p>
+                                        <p id='Header_User_Menu_P'><Link to='/login' style={{fontWeight: 'bold'}}>로그아웃</Link></p>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><CssLogoutButton onClick={signout}>로그아웃</CssLogoutButton></li>
                             </ul>
                         </div>
                     </div>
